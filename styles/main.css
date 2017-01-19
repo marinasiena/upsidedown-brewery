@@ -1,0 +1,193 @@
+body {
+  font-size: 14px;
+  line-height: 1.6;
+  font-family: 'Crimson Text', serif;
+  background: url("https://www.transparenttextures.com/patterns/grid.png") #170c02;
+  color: #b7ada5;
+}
+img {
+  max-width:100%;
+}
+h1, h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: 'Amatic SC', cursive;
+  color: #d1c6bc;
+}
+h2 {
+  font-size: 2rem;
+}
+article {
+  margin-bottom: 2%;
+}
+
+.header-hero {
+  background: url(../images/brewpic.jpg) no-repeat center center;
+  background-size: cover;
+  height: 20vh;
+  width:100%;
+  position: relative;
+}
+.logo {
+  width: 70%;
+  position: absolute;
+  bottom:-50%;
+  left:15%;
+  display: block;
+}
+.logo img {
+  animation: rotate 20s linear infinite;
+}
+@keyframes rotate {
+  0% {
+    transform:rotateX(0deg);
+  }
+  100% {
+    transform:rotateX(359deg);
+  }
+}
+
+/* Main nav --------------------*/
+.nav-main {
+  width: 45%;
+  position: fixed;
+  left:0;
+  bottom:5px;
+  width:30%;
+  z-index: 5;
+}
+.nav-main ul {
+  width: 60%;
+}
+.nav-main li {
+  color:#170c02;
+  border-radius: 0 5px 5px 0;
+  margin-bottom: 5%;
+  background: #b7ada5;
+  text-decoration:none;
+  padding:5%;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-family: 'Amatic SC', cursive;
+  transition: all .3s ease-out;
+}
+.nav-main li:hover {
+  background: #a62103;
+  transform: scale(1.2);
+  padding-left:15%;
+}
+
+
+.intro {
+  text-align: center;
+  margin-top: 5vh;
+}
+
+.content-main {
+  margin:5%;
+  text-align: center;
+}
+
+.brews ul{
+  background: #e0d8d0;
+  border-radius: 10px;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.brews li {
+  position:relative;
+}
+.brews img {
+  padding:10% 5%;
+}
+
+.contact-form {
+}
+.contact-form form {
+  background: #e0d8d0;
+  border-radius: 10px;
+  text-align: right;
+  padding: 6% 30%;
+  padding-left: 0;
+}
+
+/*Social media nav menu----------*/
+.social-media {
+  bottom:5px;
+  position: fixed;
+  right:0;
+  width:100%;
+  background: linear-gradient(to bottom, rgba(183,173,165,0.5) 1%,rgba(183,173,165,0.5) 50%,rgba(183,173,165,0.5) 100%);
+}
+.social-media ul {
+  display: flex;
+  align-content: space-around;
+  justify-content: center;
+  margin-left: 50%;
+}
+.social-media li {
+  margin: 4% 4%;
+  margin-bottom:5px;
+  transition: all .3s ease-out;
+  width:100%;
+}
+.social-media li:hover {
+  transform: scale(1.5);
+}
+
+.main-footer {
+  width:100%;
+  text-align: right;
+  padding:5%;
+  margin-bottom: 15%;
+  display:block;
+}
+
+/*Media queries-------------------*/
+@media screen and (min-width: 590px) {
+  .logo {
+    bottom:-65%;
+  }
+}
+@media screen and (min-width: 690px) {
+    h1, h2 {
+    font-size: 5rem;
+    }
+    p {
+      font-size: 2rem;
+    }
+    .header-hero {
+    height: 70vh;
+    }
+    .logo {
+      bottom:-20%;
+    }
+  .nav-main {
+    bottom:inherit;
+    top:1%;
+  }
+  .nav-main ul {
+    width: 35%;
+  }
+  .brews ul {
+    flex-wrap: nowrap;
+  }
+  .social-media {
+    bottom:inherit;
+    top:0;
+  }
+  .social-media ul {
+    margin-left: 80%;
+  }
+  .main-footer {
+    margin-bottom:inherit;
+  }
+  .two-col {
+    display: flex;
+  }
+  .two-col article:nth-child(2) {
+    flex-grow:2;
+  }
+}
